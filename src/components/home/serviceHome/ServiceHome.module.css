@@ -1,0 +1,74 @@
+.services {
+  padding: 70px 50px;
+  margin: 100px;
+  background: #030b2d;
+ border-radius: 40px;
+  color: rgb(19, 19, 19);
+  text-align: center;
+}
+
+/* TITLE */
+.title {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #facc15;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(250, 204, 21, 0.4);
+}
+
+/* BUTTON */
+.btnContainer {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #facc15;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fde047;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,902 @@
+
+.servicesPage {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  color: #172033;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+  position: relative;
+
+  min-height: 650px;
+
+  display: flex;
+  align-items: center;
+
+  background-image: url("https://images.unsplash.com/photo-1504307651254-35680f356dfd");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 18, 34, 0.95),
+      rgba(8, 18, 34, 0.70),
+      rgba(8, 18, 34, 0.20)
+    );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: 90%;
+  max-width: 1200px;
+
+  margin: auto;
+
+  color: white;
+}
+
+.heroLabel {
+  display: block;
+
+  color: #f5a623;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(50px, 7vw, 85px);
+
+  line-height: 1;
+
+  letter-spacing: -3px;
+
+  margin: 0 0 30px;
+}
+
+.hero h1 span {
+  color: #f5a623;
+}
+
+.hero p {
+  max-width: 650px;
+
+  color: #d5dbe5;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+.heroButtons {
+  display: flex;
+
+  gap: 15px;
+
+  margin-top: 35px;
+}
+
+.primaryBtn,
+.outlineBtn {
+  padding: 16px 28px;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.primaryBtn {
+  background: #f5a623;
+
+  color: #111c2d;
+
+  border: 1px solid #f5a623;
+}
+
+.primaryBtn:hover {
+  background: white;
+
+  border-color: white;
+
+  transform: translateY(-3px);
+}
+
+.outlineBtn {
+  background: transparent;
+
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.outlineBtn:hover {
+  background: white;
+
+  color: #111c2d;
+}
+
+.heroBottom {
+  position: absolute;
+
+  z-index: 3;
+
+  bottom: 30px;
+
+  right: 5%;
+
+  display: flex;
+
+  gap: 15px;
+
+  color: white;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+
+/* ==============================
+   INTRO
+============================== */
+
+.intro {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 120px 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.sectionLabel {
+  display: inline-block;
+
+  color: #e89b18;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.introContent h2 {
+  font-size: 50px;
+
+  line-height: 1.1;
+
+  margin: 18px 0 25px;
+}
+
+.introContent h2 span,
+.sectionHeading h2 span,
+.completeContent h2 span {
+  color: #e89b18;
+}
+
+.introContent > p {
+  color: #667085;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.introStats {
+  display: flex;
+
+  gap: 50px;
+
+  margin-top: 40px;
+}
+
+.introStats div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.introStats strong {
+  font-size: 35px;
+
+  color: #111c2d;
+}
+
+.introStats span {
+  color: #667085;
+
+  font-size: 12px;
+
+  margin-top: 5px;
+}
+
+.introImage {
+  position: relative;
+}
+
+.introImage img {
+  width: 100%;
+
+  height: 550px;
+
+  object-fit: cover;
+}
+
+.imageCard {
+  position: absolute;
+
+  left: -25px;
+
+  bottom: 25px;
+
+  background: #f5a623;
+
+  padding: 22px 28px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.imageCard strong {
+  font-size: 32px;
+}
+
+.imageCard span {
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+
+/* ==============================
+   ELEVATOR SECTION
+============================== */
+
+.elevatorSection {
+  background: #f6f7f9;
+
+  padding: 110px 30px;
+}
+
+.sectionHeading {
+  max-width: 720px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.sectionHeading h2 {
+  font-size: 48px;
+
+  line-height: 1.1;
+
+  margin: 15px 0;
+}
+
+.sectionHeading p {
+  color: #667085;
+
+  line-height: 1.8;
+}
+
+.elevatorGrid {
+  max-width: 1200px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.elevatorCard {
+  background: white;
+
+  border: 1px solid #e4e7ec;
+
+  transition: 0.35s;
+}
+
+.elevatorCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.09);
+}
+
+.cardImage {
+  position: relative;
+
+  height: 270px;
+
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.elevatorCard:hover .cardImage img {
+  transform: scale(1.06);
+}
+
+.cardImage > span {
+  position: absolute;
+
+  top: 20px;
+
+  right: 20px;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f5a623;
+
+  color: #111c2d;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.cardContent {
+  padding: 30px;
+
+  min-height: 230px;
+
+  position: relative;
+}
+
+.cardCategory {
+  color: #e89b18;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.cardContent h3 {
+  font-size: 23px;
+
+  margin: 12px 0;
+}
+
+.cardContent p {
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.cardContent a {
+  position: absolute;
+
+  bottom: 25px;
+
+  color: #111c2d;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+.cardContent a:hover {
+  color: #e89b18;
+}
+
+
+/* ==============================
+   COMPLETE SERVICES
+============================== */
+
+.completeSection {
+  max-width: 1200px;
+
+  margin: auto;
+
+  padding: 120px 30px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 90px;
+
+  align-items: center;
+}
+
+.completeImage {
+  position: relative;
+}
+
+.completeImage img {
+  width: 100%;
+
+  height: 600px;
+
+  object-fit: cover;
+}
+
+.experienceBadge {
+  position: absolute;
+
+  right: -25px;
+
+  bottom: 30px;
+
+  padding: 25px;
+
+  background: #111c2d;
+
+  color: white;
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.experienceBadge strong {
+  color: #f5a623;
+
+  font-size: 40px;
+}
+
+.experienceBadge span {
+  font-size: 11px;
+}
+
+.completeContent h2 {
+  font-size: 48px;
+
+  line-height: 1.1;
+
+  margin: 18px 0 25px;
+}
+
+.completeContent > p {
+  color: #667085;
+
+  line-height: 1.8;
+}
+
+.serviceList {
+  margin-top: 35px;
+}
+
+.serviceItem {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.serviceNumber {
+  color: #e89b18;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.serviceItem h3 {
+  margin: 0 0 7px;
+
+  font-size: 18px;
+}
+
+.serviceItem p {
+  margin: 0;
+
+  color: #667085;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* ==============================
+   WHY CHOOSE US
+============================== */
+
+.whySection {
+  background: #f6f7f9;
+
+  padding: 110px 30px;
+}
+
+.whyGrid {
+  max-width: 1200px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.whyCard {
+  position: relative;
+
+  background: white;
+
+  padding: 35px;
+
+  min-height: 270px;
+
+  border: 1px solid #e4e7ec;
+
+  transition: 0.3s;
+}
+
+.whyCard:hover {
+  transform: translateY(-7px);
+
+  border-color: #f5a623;
+}
+
+.whyCard > span {
+  position: absolute;
+
+  top: 20px;
+
+  right: 25px;
+
+  color: #e89b18;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.whyIcon {
+  width: 55px;
+
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #fff3dc;
+
+  color: #e89b18;
+
+  font-size: 22px;
+
+  font-weight: 800;
+
+  margin-bottom: 25px;
+}
+
+.whyCard h3 {
+  margin: 0 0 12px;
+
+  font-size: 20px;
+}
+
+.whyCard p {
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ==============================
+   PROCESS
+============================== */
+
+.processSection {
+  padding: 110px 30px;
+}
+
+.processGrid {
+  max-width: 1200px;
+
+  margin: 60px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+.processGrid > div {
+  position: relative;
+
+  padding: 35px;
+
+  border-top: 3px solid #f5a623;
+
+  background: #f6f7f9;
+}
+
+.processGrid span {
+  color: #e89b18;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+.processGrid h3 {
+  font-size: 20px;
+
+  margin: 25px 0 10px;
+}
+
+.processGrid p {
+  color: #667085;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ==============================
+   CTA
+============================== */
+
+.cta {
+  padding: 90px max(30px, 8%);
+
+  background:
+    linear-gradient(
+      100deg,
+      #111c2d,
+      #1d2c41
+    );
+
+  color: white;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 50px;
+}
+
+.cta > div > span {
+  color: #f5a623;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+}
+
+.cta h2 {
+  font-size: 45px;
+
+  line-height: 1.15;
+
+  margin: 15px 0;
+}
+
+.cta h2 strong {
+  color: #f5a623;
+}
+
+.cta p {
+  color: #c6ccd5;
+
+  line-height: 1.7;
+}
+
+.cta button {
+  white-space: nowrap;
+
+  padding: 17px 30px;
+
+  background: #f5a623;
+
+  color: #111c2d;
+
+  border: none;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cta button:hover {
+  background: white;
+
+  transform: translateY(-3px);
+}
+
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 1000px) {
+
+  .elevatorGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .processGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro,
+  .completeSection {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .heroButtons {
+    flex-direction: column;
+
+    width: 220px;
+  }
+
+  .heroBottom {
+    display: none;
+  }
+
+  .intro,
+  .completeSection {
+    padding: 75px 20px;
+  }
+
+  .introContent h2,
+  .completeContent h2,
+  .sectionHeading h2 {
+    font-size: 35px;
+  }
+
+  .introImage img,
+  .completeImage img {
+    height: 420px;
+  }
+
+  .imageCard {
+    left: 10px;
+  }
+
+  .experienceBadge {
+    right: 10px;
+  }
+
+  .introStats {
+    gap: 25px;
+  }
+
+  .introStats strong {
+    font-size: 28px;
+  }
+
+  .elevatorSection,
+  .whySection,
+  .processSection {
+    padding: 75px 20px;
+  }
+
+  .elevatorGrid,
+  .whyGrid,
+  .processGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardImage {
+    height: 240px;
+  }
+
+  .cta {
+    padding: 70px 20px;
+  }
+
+  .cta h2 {
+    font-size: 35px;
+  }
+
+  .cta button {
+    width: 100%;
+  }
+}
