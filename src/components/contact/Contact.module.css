@@ -1,0 +1,595 @@
+.contactPage {
+  width: 100%;
+  overflow: hidden;
+  color: #263754;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      110deg,
+      #081b43,
+      #102a72
+    );
+
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -180px;
+  top: -180px;
+
+  border: 80px solid rgba(255, 202, 40, 0.08);
+
+  border-radius: 50%;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+
+  width: min(1180px, 92%);
+  margin: auto;
+}
+
+.heroContent > span {
+  color: #ffca28;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.heroContent h1 {
+  margin: 18px 0;
+
+  color: white;
+
+  font-size: clamp(42px, 6vw, 68px);
+
+  line-height: 1.05;
+}
+
+.heroContent h1 strong {
+  color: #ffca28;
+}
+
+.heroContent p {
+  max-width: 600px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 12px;
+
+  margin-top: 25px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 14px;
+}
+
+.breadcrumb strong {
+  color: white;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contactSection {
+  padding: 100px 0;
+  background: #f8f9fc;
+}
+
+.contactGrid {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 80px;
+
+  align-items: start;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.sectionTag {
+  color: #d71945;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.contactInfo h2 {
+  margin: 15px 0;
+
+  color: #102a72;
+
+  font-size: clamp(34px, 4vw, 48px);
+}
+
+.contactInfo h2 span {
+  color: #d71945;
+}
+
+.intro {
+  color: #737d90;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+}
+
+.infoItem {
+  display: flex;
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.infoIcon {
+  width: 52px;
+  height: 52px;
+
+  min-width: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff0f4;
+
+  color: #d71945;
+
+  border-radius: 10px;
+
+  font-size: 22px;
+}
+
+.infoItem h3 {
+  margin: 0 0 5px;
+
+  color: #102a72;
+
+  font-size: 17px;
+}
+
+.infoItem a {
+  display: block;
+
+  color: #d71945;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  margin-bottom: 5px;
+}
+
+.infoItem span,
+.infoItem p {
+  margin: 0;
+
+  color: #7a8394;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+/* WhatsApp */
+
+.whatsapp {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  margin-top: 35px;
+
+  background: #102a72;
+
+  border-radius: 10px;
+
+  color: white;
+
+  text-decoration: none;
+}
+
+.whatsapp > span {
+  font-size: 27px;
+}
+
+.whatsapp div {
+  flex: 1;
+}
+
+.whatsapp strong {
+  display: block;
+
+  font-size: 15px;
+}
+
+.whatsapp small {
+  color: rgba(255,255,255,0.65);
+
+  font-size: 12px;
+}
+
+.whatsapp > b {
+  color: #ffca28;
+
+  font-size: 20px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.formCard {
+  background: white;
+
+  padding: 45px;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 15px 50px rgba(16, 42, 114, 0.08);
+}
+
+.formHeader {
+  margin-bottom: 30px;
+}
+
+.formHeader > span {
+  color: #d71945;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.formHeader h2 {
+  margin: 10px 0;
+
+  color: #102a72;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+}
+
+.formHeader p {
+  margin: 0;
+
+  color: #7a8394;
+
+  font-size: 14px;
+}
+
+/* Row */
+
+.formRow {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #263754;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.formGroup label span {
+  color: #d71945;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 14px 15px;
+
+  border: 1px solid #dfe3ea;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: white;
+
+  color: #263754;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+  border-color: #102a72;
+
+  box-shadow:
+    0 0 0 3px rgba(16, 42, 114, 0.07);
+}
+
+/* Button */
+
+.submitButton {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #d71945;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.submitButton:hover {
+  background: #b9143a;
+
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.submitButton span {
+  margin-left: 10px;
+
+  font-size: 18px;
+}
+
+.formNote {
+  margin: 15px 0 0;
+
+  text-align: center;
+
+  color: #8a93a3;
+
+  font-size: 11px;
+}
+
+/* Status */
+
+.successMessage,
+.errorMessage {
+  padding: 13px;
+
+  margin-bottom: 18px;
+
+  border-radius: 6px;
+
+  font-size: 13px;
+}
+
+.successMessage {
+  background: #eaf8ef;
+
+  color: #16733a;
+}
+
+.errorMessage {
+  background: #fff0f1;
+
+  color: #b42318;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+  padding: 55px 0;
+
+  background: #102a72;
+}
+
+.cta .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+.cta span {
+  color: #ffca28;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.cta h2 {
+  margin: 8px 0 0;
+
+  color: white;
+
+  font-size: 30px;
+}
+
+.cta a {
+  display: inline-block;
+
+  padding: 15px 28px;
+
+  background: #d71945;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 5px;
+
+  font-weight: 700;
+}
+
+.cta a:hover {
+  background: #b9143a;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .contactGrid {
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+  }
+
+  .contactInfo {
+    max-width: 700px;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+  .hero {
+    min-height: 400px;
+  }
+
+  .heroContent {
+    width: 88%;
+  }
+
+  .heroContent h1 {
+    font-size: 40px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+
+  .contactSection {
+    padding: 65px 0;
+  }
+
+  .formCard {
+    padding: 25px 18px;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .formHeader h2 {
+    font-size: 26px;
+  }
+
+  .cta .container {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .cta h2 {
+    font-size: 26px;
+  }
+
+  .cta a {
+    width: 100%;
+
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+
+}
+

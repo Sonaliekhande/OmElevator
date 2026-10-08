@@ -7,8 +7,8 @@ function Homepage() {
   return (
     <div>
       <Herosection/>
-      <AboutHome/>
-      <ServiceHome/>
+      {/* <AboutHome/>
+      <ServiceHome/> */}
     </div>
   )
 }

@@ -1,15 +1,15 @@
-import s1 from "../assets/Liftimages/images.jfif";
-import s2 from "../assets/Liftimages/images.jfif";
-import s3 from "../assets/Liftimages/images.jfif";
-import s4 from "../assets/Liftimages/images.jfif";
-import s5 from "../assets/Liftimages/images.jfif";
-import s6 from "../assets/Liftimages/images.jfif";
-import s7 from "../assets/Liftimages/images.jfif";
-import s8 from "../assets/Liftimages/images.jfif";
-import s9 from "../assets/Liftimages/images.jfif";
-import s10 from "../assets/Liftimages/images.jfif";
-import s11 from "../assets/Liftimages/images.jfif";
-import s12 from "../assets/Liftimages/images.jfif";
+import s1 from "../assets/Liftimages/images.png";
+import s2 from "../assets/Liftimages/images.png";
+import s3 from "../assets/Liftimages/images.png";
+import s4 from "../assets/Liftimages/images.png";
+import s5 from "../assets/Liftimages/images.png";
+import s6 from "../assets/Liftimages/images.png";
+import s7 from "../assets/Liftimages/images.png";
+import s8 from "../assets/Liftimages/images.png";
+import s9 from "../assets/Liftimages/images.png";
+import s10 from "../assets/Liftimages/images.png";
+import s11 from "../assets/Liftimages/images.png";
+import s12 from "../assets/Liftimages/images.png";
 
 const servicesData = [
   { id: 1, img: s1, name: "Passenger Lift" },

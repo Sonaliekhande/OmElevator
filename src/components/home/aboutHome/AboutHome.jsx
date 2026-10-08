@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./AboutHome.module.css";
 
 // Replace this import with your actual image path
-import aboutImage from "../../../assets/Liftimages/images.jfif";
+import aboutImage from "../../../assets/Liftimages/images.png";
 
 const AboutHome = () => {
   return (
