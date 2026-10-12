@@ -586,75 +586,9 @@
 
 
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Services.module.css";
-
-import passengerImg from "../../assets/Liftimages/images.png";
-import homeImg from "../../assets/Liftimages/images1.png";
-import hospitalImg from "../../assets/Liftimages/images.png";
-import goodsImg from "../../assets/Liftimages/images1.png";
-
-const services = [
-  {
-    id: 1,
-    number: "01",
-    title: "Passenger Elevators",
-    shortTitle: "Passenger Lift",
-    description:
-      "Safe, smooth and efficient passenger elevators designed for residential, commercial and high-rise buildings.",
-    image: passengerImg,
-    features: [
-      "Smooth & quiet operation",
-      "Modern cabin designs",
-      "Energy efficient technology",
-      "Advanced safety systems",
-    ],
-  },
-  {
-    id: 2,
-    number: "02",
-    title: "Home Elevators",
-    shortTitle: "Home Lift",
-    description:
-      "Premium home elevator solutions that combine comfort, elegance and safety for modern homes and villas.",
-    image: homeImg,
-    features: [
-      "Compact installation",
-      "Luxury cabin options",
-      "Low power consumption",
-      "Easy operation",
-    ],
-  },
-  {
-    id: 3,
-    number: "03",
-    title: "Hospital Elevators",
-    shortTitle: "Hospital Lift",
-    description:
-      "Specially designed elevators for hospitals and healthcare facilities with spacious cabins and reliable performance.",
-    image: hospitalImg,
-    features: [
-      "Large cabin capacity",
-      "Smooth starting & stopping",
-      "Stretcher friendly design",
-      "High safety standards",
-    ],
-  },
-  {
-    id: 4,
-    number: "04",
-    title: "Goods Elevators",
-    shortTitle: "Goods Lift",
-    description:
-      "Heavy-duty goods elevators engineered to transport materials, equipment and products safely and efficiently.",
-    image: goodsImg,
-    features: [
-      "Heavy load capacity",
-      "Strong construction",
-      "Industrial performance",
-      "Durable components",
-    ],
-  },
-];
+import servicesData from "../../data/servicesData";
 
 const additionalServices = [
   {
@@ -780,7 +714,7 @@ const Services = () => {
 
           <div className={styles.serviceGrid}>
 
-            {services.map((service, index) => (
+            {servicesData.map((service, index) => (
               <article
                 className={`${styles.serviceCard} ${
                   index % 2 !== 0 ? styles.reverseCard : ""
@@ -795,14 +729,14 @@ const Services = () => {
                   />
 
                   <span className={styles.serviceNumber}>
-                    {service.number}
+                    {String(service.id).padStart(2, "0")}
                   </span>
                 </div>
 
                 <div className={styles.serviceContent}>
 
                   <span className={styles.serviceSmallTitle}>
-                    {service.shortTitle}
+                    {service.name}
                   </span>
 
                   <h3>{service.title}</h3>
@@ -818,13 +752,21 @@ const Services = () => {
                     ))}
                   </ul>
 
-                  <a
-                    href="/contact"
+                  <Link
+                    to={`/services/${service.slug}`}
+                    className={styles.serviceButton}
+                  >
+                    Explore Service
+                    <span>→</span>
+                  </Link>
+
+                  <Link
+                    to="/contact"
                     className={styles.serviceButton}
                   >
                     Get a Quote
                     <span>→</span>
-                  </a>
+                  </Link>
 
                 </div>
 

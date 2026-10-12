@@ -1,8 +1,98 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+:root {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #263754;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --color-navy: #102a72;
+  --color-navy-deep: #081b43;
+  --color-red: #d71945;
+  --color-gold: #ffca28;
+  --color-text: #263754;
+  --color-muted: #69758a;
+  --color-surface: #f7f9fc;
+}
 
 body {
   margin: 0;
   padding: 0;
+  color: var(--color-text);
+  background: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--color-navy);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+.routeTransition {
+  animation: route-enter 520ms cubic-bezier(0.2, 0.7, 0.25, 1) both;
+}
+
+:is(
+  .routeTransition [class*="galleryPage"] > section,
+  .routeTransition [class*="servicesPage"] > section,
+  .routeTransition [class*="aboutPage"] > section,
+  .routeTransition [class*="contactPage"] > section,
+  .routeTransition [class*="page"] > section,
+  .routeTransition main[class*="home"] > section,
+  .routeTransition section[class*="homeServices"]
+) {
+  animation: page-section-enter 600ms cubic-bezier(0.2, 0.7, 0.25, 1) both;
+}
+
+.routeTransition :is(a, button) {
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+@keyframes route-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes page-section-enter {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

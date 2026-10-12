@@ -248,7 +248,11 @@
 
 
 import React from "react";
+import { Link } from "react-router-dom";
+import ScrollReveal from "../../common/ScrollReveal";
 import styles from "./Abouts.module.css";
+import heroImage from "../../../assets/Liftimages/images.png";
+import companyImage from "../../../assets/Liftimages/images2.png";
 
 const Abouts = () => {
   return (
@@ -264,20 +268,42 @@ const Abouts = () => {
           <span className={styles.heroTag}>ABOUT OM ELEVATORS</span>
 
           <h1>
-            Moving People.
+            Moving people.
             <br />
-            <span>Moving Progress.</span>
+            <span>Moving life forward.</span>
           </h1>
 
           <p>
-            Reliable elevator solutions designed to make every journey
-            safe, smooth and comfortable.
+            Thoughtful elevator solutions, expert installation and dependable
+            care—so every journey feels effortless.
           </p>
 
+          <div className={styles.heroActions}>
+            <Link to="/services" className={styles.heroPrimaryButton}>
+              Explore our services <span>↗</span>
+            </Link>
+            <Link to="/contact" className={styles.heroSecondaryButton}>
+              Talk to our team
+            </Link>
+          </div>
+
           <div className={styles.breadcrumb}>
-            <span>Home</span>
+            <Link to="/">Home</Link>
             <span>/</span>
             <strong>About Us</strong>
+          </div>
+        </div>
+
+        <div className={styles.heroVisual}>
+          <div className={styles.heroImageFrame}>
+            <img src={heroImage} alt="Modern elevator installation" />
+          </div>
+          <div className={styles.heroVisualBadge}>
+            <span>OM</span>
+            <div>
+              <strong>Designed around you</strong>
+              <small>Safety. Comfort. Support.</small>
+            </div>
           </div>
         </div>
       </section>
@@ -293,10 +319,10 @@ const Abouts = () => {
             {/* Image */}
             <div className={styles.aboutImageWrapper}>
               <div className={styles.imageBox}>
-                <div className={styles.imagePlaceholder}>
-                  <span>OM</span>
-                  <p>ELEVATORS</p>
-                </div>
+                <img
+                  src={companyImage}
+                  alt="A modern elevator cabin installed in a building"
+                />
               </div>
 
               <div className={styles.experienceBox}>
@@ -308,72 +334,78 @@ const Abouts = () => {
             {/* Content */}
             <div className={styles.aboutContent}>
 
-              <span className={styles.sectionTag}>
-                WHO WE ARE
-              </span>
+              <span className={styles.sectionTag}>WHO WE ARE</span>
 
               <h2>
-                Your Trusted Partner in
-                <span> Vertical Transportation</span>
+                More than a lift.
+                <span> A partner you can rely on.</span>
               </h2>
 
               <p>
-                OM Elevators is committed to providing high-quality,
-                reliable and innovative elevator solutions for residential,
-                commercial, industrial and institutional buildings.
+                Every building has different needs. We help you find an
+                elevator solution that fits your space, your plans and the
+                people who use it every day.
               </p>
 
               <p>
-                We combine modern technology, skilled professionals and
-                customer-focused service to deliver elevators that provide
-                excellent performance, safety and long-term reliability.
+                From the first conversation to installation and ongoing
+                maintenance, our team is here to make the process clear,
+                dependable and focused on long-term performance.
               </p>
 
               <div className={styles.aboutFeatures}>
 
+                <ScrollReveal delay={0}>
                 <div className={styles.feature}>
                   <div className={styles.featureIcon}>✓</div>
 
                   <div>
                     <h3>Safety First</h3>
                     <p>
-                      Safety is at the heart of everything we do.
+                      Careful planning and safe working practices at every step.
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
+                <ScrollReveal delay={70}>
                 <div className={styles.feature}>
                   <div className={styles.featureIcon}>✓</div>
 
                   <div>
                     <h3>Quality Products</h3>
                     <p>
-                      Reliable elevator systems built for performance.
+                      Dependable systems selected for lasting performance.
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
+                <ScrollReveal delay={140}>
                 <div className={styles.feature}>
                   <div className={styles.featureIcon}>✓</div>
 
                   <div>
                     <h3>Expert Support</h3>
                     <p>
-                      Professional installation and maintenance.
+                      Skilled help from installation through maintenance.
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
+                <ScrollReveal delay={210}>
                 <div className={styles.feature}>
                   <div className={styles.featureIcon}>✓</div>
 
                   <div>
                     <h3>Customer Focused</h3>
                     <p>
-                      Solutions designed around your requirements.
+                      Clear guidance shaped around your building.
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
               </div>
 
@@ -392,25 +424,33 @@ const Abouts = () => {
 
           <div className={styles.statsGrid}>
 
+            <ScrollReveal delay={0}>
             <div className={styles.statItem}>
               <strong>10+</strong>
               <span>Years Experience</span>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={70}>
             <div className={styles.statItem}>
               <strong>500+</strong>
               <span>Elevators Installed</span>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={140}>
             <div className={styles.statItem}>
               <strong>450+</strong>
               <span>Happy Customers</span>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={210}>
             <div className={styles.statItem}>
               <strong>24/7</strong>
               <span>Service Support</span>
             </div>
+            </ScrollReveal>
 
           </div>
 
@@ -433,14 +473,15 @@ const Abouts = () => {
             </h2>
 
             <p>
-              Our goal is to create safer, smarter and more comfortable
-              vertical transportation solutions.
+              We focus on practical elevator solutions that make everyday
+              movement safer, simpler and more comfortable.
             </p>
           </div>
 
           <div className={styles.missionGrid}>
 
             {/* Mission */}
+            <ScrollReveal delay={0}>
             <div className={styles.missionCard}>
 
               <div className={styles.missionIcon}>
@@ -458,8 +499,10 @@ const Abouts = () => {
               </div>
 
             </div>
+            </ScrollReveal>
 
             {/* Vision */}
+            <ScrollReveal delay={120}>
             <div className={`${styles.missionCard} ${styles.visionCard}`}>
 
               <div className={styles.missionIcon}>
@@ -477,6 +520,7 @@ const Abouts = () => {
               </div>
 
             </div>
+            </ScrollReveal>
 
           </div>
 
@@ -499,13 +543,14 @@ const Abouts = () => {
             </h2>
 
             <p>
-              We don't just install elevators. We build long-term
-              relationships with our customers.
+              We stay involved from planning and installation through
+              maintenance, with clear communication at every step.
             </p>
           </div>
 
           <div className={styles.whyGrid}>
 
+            <ScrollReveal delay={0}>
             <div className={styles.whyCard}>
               <div className={styles.whyNumber}>01</div>
 
@@ -516,7 +561,9 @@ const Abouts = () => {
                 comfortable and reliable transportation.
               </p>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={70}>
             <div className={styles.whyCard}>
               <div className={styles.whyNumber}>02</div>
 
@@ -527,7 +574,9 @@ const Abouts = () => {
                 service with professional expertise.
               </p>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={140}>
             <div className={styles.whyCard}>
               <div className={styles.whyNumber}>03</div>
 
@@ -538,7 +587,9 @@ const Abouts = () => {
                 performance as our highest priorities.
               </p>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={210}>
             <div className={styles.whyCard}>
               <div className={styles.whyNumber}>04</div>
 
@@ -549,6 +600,7 @@ const Abouts = () => {
                 maintenance and reliable service assistance.
               </p>
             </div>
+            </ScrollReveal>
 
           </div>
 
@@ -574,12 +626,13 @@ const Abouts = () => {
               </h2>
 
               <p>
-                Our values guide every decision we make and every elevator
-                solution we deliver.
+                These principles shape how we plan each installation, care for
+                each system and work with every customer.
               </p>
 
               <div className={styles.valueList}>
 
+                <ScrollReveal delay={0}>
                 <div className={styles.valueItem}>
                   <span>01</span>
                   <div>
@@ -589,7 +642,9 @@ const Abouts = () => {
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
+                <ScrollReveal delay={70}>
                 <div className={styles.valueItem}>
                   <span>02</span>
                   <div>
@@ -599,7 +654,9 @@ const Abouts = () => {
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
+                <ScrollReveal delay={140}>
                 <div className={styles.valueItem}>
                   <span>03</span>
                   <div>
@@ -609,7 +666,9 @@ const Abouts = () => {
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
+                <ScrollReveal delay={210}>
                 <div className={styles.valueItem}>
                   <span>04</span>
                   <div>
@@ -619,6 +678,7 @@ const Abouts = () => {
                     </p>
                   </div>
                 </div>
+                </ScrollReveal>
 
               </div>
 
@@ -659,6 +719,7 @@ const Abouts = () => {
 
           <div className={styles.processGrid}>
 
+            <ScrollReveal delay={0}>
             <div className={styles.processItem}>
               <div className={styles.processNumber}>01</div>
               <h3>Consultation</h3>
@@ -666,7 +727,9 @@ const Abouts = () => {
                 We understand your building and elevator requirements.
               </p>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={70}>
             <div className={styles.processItem}>
               <div className={styles.processNumber}>02</div>
               <h3>Planning</h3>
@@ -674,7 +737,9 @@ const Abouts = () => {
                 Our team creates the right elevator solution for your needs.
               </p>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={140}>
             <div className={styles.processItem}>
               <div className={styles.processNumber}>03</div>
               <h3>Installation</h3>
@@ -682,7 +747,9 @@ const Abouts = () => {
                 Professional installation with attention to safety and quality.
               </p>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={210}>
             <div className={styles.processItem}>
               <div className={styles.processNumber}>04</div>
               <h3>Support</h3>
@@ -690,6 +757,7 @@ const Abouts = () => {
                 Continued maintenance and service after installation.
               </p>
             </div>
+            </ScrollReveal>
 
           </div>
 
@@ -718,13 +786,13 @@ const Abouts = () => {
 
             <div className={styles.ctaButtons}>
 
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className={styles.primaryButton}
               >
                 Get a Free Quote
                 <span>→</span>
-              </a>
+              </Link>
 
               <a
                 href="tel:+919876543210"

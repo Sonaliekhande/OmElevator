@@ -164,6 +164,8 @@
 
 
 import React from "react";
+import { Link } from "react-router-dom";
+import ScrollReveal from "../../common/ScrollReveal";
 import styles from "./Herosection.module.css";
 
 import img1 from "../../../assets/Liftimages/images.png";
@@ -182,30 +184,30 @@ const Herosection = () => {
 
           <div className={styles.tag}>
             <span></span>
-            GOVT. APPROVED LIFT INSTALLATION
+            ELEVATOR INSTALLATION • SERVICE • MODERNIZATION
           </div>
 
           <h1>
-            Elevating
+            Move with
             <br />
-            <span>Life Higher.</span>
+            <span>confidence.</span>
           </h1>
 
           <p className={styles.heroText}>
-            Safe, smart and reliable elevator solutions designed
-            for modern homes, businesses, hospitals and industries.
+            From choosing the right elevator to keeping it running smoothly,
+            our team helps make every journey safer, easier and more reliable.
           </p>
 
           <div className={styles.heroButtons}>
 
-            <button className={styles.primaryBtn}>
-              Explore Our Lifts
+            <Link to="/services" className={styles.primaryBtn}>
+              Explore our services
               <span>↗</span>
-            </button>
+            </Link>
 
-            <button className={styles.secondaryBtn}>
-              Get Free Quote
-            </button>
+            <Link to="/contact" className={styles.secondaryBtn}>
+              Request a quote
+            </Link>
 
           </div>
 
@@ -270,25 +272,33 @@ const Herosection = () => {
 
       <section className={styles.trustBar}>
 
+        <ScrollReveal delay={0}>
         <div>
           <span>✓</span>
           Licensed Electrical Contractors
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={70}>
         <div>
           <span>✓</span>
           Professional Installation
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={140}>
         <div>
           <span>✓</span>
           Expert Maintenance
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={210}>
         <div>
           <span>✓</span>
           Reliable Support
         </div>
+        </ScrollReveal>
 
       </section>
 
@@ -316,8 +326,9 @@ const Herosection = () => {
         </div>
 
 
-        <div className={styles.serviceGrid}>
+        <div className={styles.serviceGrid} id="elevator-solutions">
 
+          <ScrollReveal delay={0}>
           <article className={styles.serviceCard}>
 
             <div className={styles.serviceTop}>
@@ -337,8 +348,10 @@ const Herosection = () => {
             </p>
 
           </article>
+          </ScrollReveal>
 
 
+          <ScrollReveal delay={80}>
           <article className={styles.serviceCard}>
 
             <div className={styles.serviceTop}>
@@ -358,8 +371,10 @@ const Herosection = () => {
             </p>
 
           </article>
+          </ScrollReveal>
 
 
+          <ScrollReveal delay={160}>
           <article className={styles.serviceCard}>
 
             <div className={styles.serviceTop}>
@@ -379,8 +394,10 @@ const Herosection = () => {
             </p>
 
           </article>
+          </ScrollReveal>
 
 
+          <ScrollReveal delay={240}>
           <article className={styles.serviceCard}>
 
             <div className={styles.serviceTop}>
@@ -400,6 +417,7 @@ const Herosection = () => {
             </p>
 
           </article>
+          </ScrollReveal>
 
         </div>
 
@@ -468,6 +486,7 @@ const Herosection = () => {
 
           <div className={styles.aboutPoints}>
 
+            <ScrollReveal delay={0}>
             <div>
               <span>01</span>
               <div>
@@ -477,7 +496,9 @@ const Herosection = () => {
                 </p>
               </div>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={90}>
             <div>
               <span>02</span>
               <div>
@@ -487,7 +508,9 @@ const Herosection = () => {
                 </p>
               </div>
             </div>
+            </ScrollReveal>
 
+            <ScrollReveal delay={180}>
             <div>
               <span>03</span>
               <div>
@@ -497,6 +520,7 @@ const Herosection = () => {
                 </p>
               </div>
             </div>
+            </ScrollReveal>
 
           </div>
 
@@ -529,75 +553,47 @@ const Herosection = () => {
 
 
         <div className={styles.productGrid}>
-
-          <div className={styles.productCard}>
-
-            <img
-              src={img1}
-              alt="Passenger Elevator"
-            />
-
-            <div className={styles.productInfo}>
-
-              <span>01</span>
-
-              <div>
-                <h3>Passenger Lift</h3>
-                <p>Comfortable & Elegant</p>
+          <ScrollReveal delay={0}>
+            <div className={styles.productCard}>
+              <img src={img1} alt="Passenger elevator" />
+              <div className={styles.productInfo}>
+                <span>01</span>
+                <div>
+                  <h3>Passenger Lift</h3>
+                  <p>Comfortable, smooth everyday travel</p>
+                </div>
+                <b>↗</b>
               </div>
-
-              <b>↗</b>
-
             </div>
+          </ScrollReveal>
 
-          </div>
-
-
-          <div className={styles.productCard}>
-
-            <img
-              src={img2}
-              alt="Capsule Elevator"
-            />
-
-            <div className={styles.productInfo}>
-
-              <span>02</span>
-
-              <div>
-                <h3>Capsule Lift</h3>
-                <p>Modern & Stylish</p>
+          <ScrollReveal delay={100}>
+            <div className={styles.productCard}>
+              <img src={img2} alt="Capsule elevator" />
+              <div className={styles.productInfo}>
+                <span>02</span>
+                <div>
+                  <h3>Capsule Lift</h3>
+                  <p>Panoramic style for modern spaces</p>
+                </div>
+                <b>↗</b>
               </div>
-
-              <b>↗</b>
-
             </div>
+          </ScrollReveal>
 
-          </div>
-
-
-          <div className={styles.productCard}>
-
-            <img
-              src={img3}
-              alt="Industrial Elevator"
-            />
-
-            <div className={styles.productInfo}>
-
-              <span>03</span>
-
-              <div>
-                <h3>Industrial Lift</h3>
-                <p>Powerful & Reliable</p>
+          <ScrollReveal delay={200}>
+            <div className={styles.productCard}>
+              <img src={img3} alt="Industrial elevator" />
+              <div className={styles.productInfo}>
+                <span>03</span>
+                <div>
+                  <h3>Industrial Lift</h3>
+                  <p>Built for demanding work environments</p>
+                </div>
+                <b>↗</b>
               </div>
-
-              <b>↗</b>
-
             </div>
-
-          </div>
-
+          </ScrollReveal>
         </div>
 
       </section>
@@ -625,83 +621,50 @@ const Herosection = () => {
             that customers can trust.
           </p>
 
-          <button className={styles.darkBtn}>
+          <Link to="/about" className={styles.darkBtn}>
             Why Choose Us
             <span>↗</span>
-          </button>
+          </Link>
 
         </div>
 
 
         <div className={styles.whyGrid}>
-
-          <div className={styles.whyItem}>
-
-            <strong>01</strong>
-
-            <div className={styles.whyIcon}>
-              🛡
+          <ScrollReveal delay={0}>
+            <div className={styles.whyItem}>
+              <strong>01</strong>
+              <div className={styles.whyIcon}>🛡</div>
+              <h3>Safety</h3>
+              <p>Safety-focused elevator installation and service.</p>
             </div>
+          </ScrollReveal>
 
-            <h3>Safety</h3>
-
-            <p>
-              Safety-focused elevator installation and service.
-            </p>
-
-          </div>
-
-
-          <div className={styles.whyItem}>
-
-            <strong>02</strong>
-
-            <div className={styles.whyIcon}>
-              ⚙
+          <ScrollReveal delay={80}>
+            <div className={styles.whyItem}>
+              <strong>02</strong>
+              <div className={styles.whyIcon}>⚙</div>
+              <h3>Quality</h3>
+              <p>Reliable components and professional workmanship.</p>
             </div>
+          </ScrollReveal>
 
-            <h3>Quality</h3>
-
-            <p>
-              Reliable components and professional workmanship.
-            </p>
-
-          </div>
-
-
-          <div className={styles.whyItem}>
-
-            <strong>03</strong>
-
-            <div className={styles.whyIcon}>
-              ⚡
+          <ScrollReveal delay={160}>
+            <div className={styles.whyItem}>
+              <strong>03</strong>
+              <div className={styles.whyIcon}>⚡</div>
+              <h3>Responsive Service</h3>
+              <p>Support for ongoing maintenance and repairs.</p>
             </div>
+          </ScrollReveal>
 
-            <h3>Fast Service</h3>
-
-            <p>
-              Quick response for maintenance and repairs.
-            </p>
-
-          </div>
-
-
-          <div className={styles.whyItem}>
-
-            <strong>04</strong>
-
-            <div className={styles.whyIcon}>
-              ★
+          <ScrollReveal delay={240}>
+            <div className={styles.whyItem}>
+              <strong>04</strong>
+              <div className={styles.whyIcon}>★</div>
+              <h3>Practical Experience</h3>
+              <p>Experienced professionals for your lift project.</p>
             </div>
-
-            <h3>Experience</h3>
-
-            <p>
-              Years of practical elevator industry experience.
-            </p>
-
-          </div>
-
+          </ScrollReveal>
         </div>
 
       </section>

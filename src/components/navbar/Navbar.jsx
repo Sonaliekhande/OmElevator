@@ -54,26 +54,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import servicesData from "../../data/servicesData";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
-  const [productOpen, setProductOpen] = useState(false);
 
   const closeMenu = () => {
     setMenuOpen(false);
     setServiceOpen(false);
-    setProductOpen(false);
   };
 
   const toggleService = () => {
     setServiceOpen(!serviceOpen);
-    setProductOpen(false);
-  };
-
-  const toggleProduct = () => {
-    setProductOpen(!productOpen);
-    setServiceOpen(false);
   };
 
   return (
@@ -152,91 +145,25 @@ const Navbar = () => {
                 All Services
               </Link>
 
-              <Link
-                to="/services/passenger"
-                onClick={closeMenu}
-              >
-                Passenger Elevator
-              </Link>
-
-              <Link
-                to="/services/home"
-                onClick={closeMenu}
-              >
-                Home Elevator
-              </Link>
-
-              <Link
-                to="/services/hospital"
-                onClick={closeMenu}
-              >
-                Hospital Elevator
-              </Link>
-
-              <Link
-                to="/services/goods"
-                onClick={closeMenu}
-              >
-                Goods Elevator
-              </Link>
+              {servicesData.map((service) => (
+                <Link
+                  key={service.slug}
+                  to={`/services/${service.slug}`}
+                  onClick={closeMenu}
+                >
+                  {service.name}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* =========================
-              PRODUCTS DROPDOWN
-          ========================= */}
-          <div className={styles.dropdown}>
-
-            <button
-              type="button"
-              className={styles.dropdownButton}
-              onClick={toggleProduct}
-            >
-              Products
-
-              <span
-                className={`${styles.arrow} ${
-                  productOpen ? styles.arrowRotate : ""
-                }`}
-              >
-                ▾
-              </span>
-            </button>
-
-            <div
-              className={`${styles.dropdownMenu} ${
-                productOpen ? styles.dropdownActive : ""
-              }`}
-            >
-              <Link
-                to="/products/passenger"
-                onClick={closeMenu}
-              >
-                Passenger Lift
-              </Link>
-
-              <Link
-                to="/products/home"
-                onClick={closeMenu}
-              >
-                Home Lift
-              </Link>
-
-              <Link
-                to="/products/hospital"
-                onClick={closeMenu}
-              >
-                Hospital Lift
-              </Link>
-
-              <Link
-                to="/products/goods"
-                onClick={closeMenu}
-              >
-                Goods Lift
-              </Link>
-            </div>
-          </div>
+          <Link
+            to="/gallery"
+            className={styles.navLink}
+            onClick={closeMenu}
+          >
+            Gallery
+          </Link>
 
           {/* CONTACT */}
           <Link
